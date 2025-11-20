@@ -2,14 +2,13 @@
 const projectsData = [
     {
         id: "dx-forest",
-        category: "Visão Computacional",
+        category: "Plataforma Web / Machine Learning",
         title: "DX Forest Vision",
-        description: "Contagem automática de plantas e falhas, análise de heterogeneidade e detecção de matocompetição.",
-        // CORREÇÃO ABAIXO: Troquei as aspas externas para simples ' '
-        fullDescription: 'O desafio consistia em monitorar vastas áreas de plantio florestal onde a contagem manual era inviável e imprecisa. Era necessário identificar não apenas a contagem ("Stand Count"), mas também falhas de plantio e competição com ervas daninhas.',
-        technicalSolution: "Desenvolvi uma arquitetura baseada em **YOLOv8** treinado com imagens de drones (RGB e Multiespectral). O pipeline processa ortomosaicos pesados dividindo-os em 'tiles', realiza a inferência e remonta as coordenadas geográficas (GeoJSON). O sistema roda em Edge Computing para pré-processamento e envia os dados para AWS S3, onde dashboards Power BI consomem os resultados.",
+        description: "Plataforma completa de inteligência geográfica para monitoramento de qualidade e sobrevivência florestal.",
+        fullDescription: 'Solução Web GIS integrada para o ciclo de qualidade florestal. A plataforma centraliza a gestão de ativos (Unidades/Fazendas/Talhões) e automatiza análises críticas a partir de ortomosaicos de drones: realiza a contagem censitária ("Stand Count"), identifica falhas de plantio (análise de sobrevivência) e mapeia áreas de matocompetição, tudo visualizável em mapas interativos.',
+        technicalSolution: "Arquitetura **FastAPI** robusta com suporte a **PostgreSQL/PostGIS** para dados espaciais. O Frontend utiliza **Leaflet** e **Turf.js** para renderização de mapas e vetores em alta performance. O núcleo de processamento integra **YOLOv8** para detecção de objetos, algoritmos geométricos para identificação de linhas de plantio e **GeoPandas/Rasterio** para manipulação de imagens georreferenciadas (GeoTIFF/COGs), rodando análises assíncronas de falhas e densidade.",
         image: "https://images.unsplash.com/photo-1506146332389-18140dc7b2fb?q=80&w=1200&auto=format&fit=crop",
-        tags: ["YOLOv8", "Python", "OpenCV", "AWS S3", "Edge Computing"]
+        tags: ["Web GIS", "FastAPI", "YOLOv8", "Leaflet", "PostGIS", "GeoPandas"]
     },
     {
         id: "monitoramento-adultas",
@@ -182,3 +181,4 @@ function loadProjectDetails() {
         document.querySelector('.project-nav').style.display = 'none'; // Esconde setas se der erro
     }
 }
+
