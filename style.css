@@ -1,13 +1,13 @@
 :root {
-    --bg-dark: #0f1115;
-    --bg-card: #161b22;
-    --text-primary: #ffffff;
+    --bg-dark: #0b0d10; /* Fundo mais profundo */
+    --bg-card: rgba(22, 27, 34, 0.6);
+    --text-primary: #f1f5f9;
     --text-secondary: #94a3b8;
-    --accent-purple: #8b5cf6;
+    --accent-purple: #a855f7;
     --accent-green: #10b981;
     --accent-blue: #3b82f6;
-    --accent-orange: #f59e0b; /* Nova cor para Software */
-    --gradient-main: linear-gradient(90deg, #10b981 0%, #3b82f6 100%);
+    --accent-orange: #f59e0b;
+    --gradient-main: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -20,10 +20,10 @@ body {
     overflow-x: hidden;
 }
 
-/* --- Navbar --- */
+/* --- Navbar (Mantida igual) --- */
 .navbar {
     position: fixed; top: 0; width: 100%; padding: 1.5rem 5%; display: flex; justify-content: space-between; align-items: center;
-    background: rgba(15, 17, 21, 0.8); backdrop-filter: blur(12px); z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.05);
+    background: rgba(11, 13, 16, 0.85); backdrop-filter: blur(16px); z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 .logo { font-weight: 900; font-size: 1.5rem; letter-spacing: -1px; }
 .logo .dot { color: var(--accent-green); }
@@ -33,74 +33,153 @@ body {
 .btn-nav { border: 1px solid rgba(255,255,255,0.2); padding: 0.5rem 1.2rem; border-radius: 50px; }
 .btn-nav:hover { border-color: var(--accent-green); color: var(--accent-green) !important; }
 
-/* --- Hero --- */
+/* --- Hero (Mantido) --- */
 .hero {
     height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; padding: 0 2rem;
     background: url('https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?q=80&w=1920&auto=format&fit=crop') no-repeat center center/cover;
 }
-.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(15,17,21,0.85), var(--bg-dark)); }
+.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(11,13,16,0.9), var(--bg-dark)); }
 .hero-content { position: relative; z-index: 2; max-width: 800px; }
-.hero-subtitle { color: var(--accent-green); font-family: 'Fira Code', monospace; margin-bottom: 1rem; font-size: 1.1rem; }
+.hero-subtitle { color: var(--accent-green); font-family: 'Fira Code', monospace; margin-bottom: 1rem; }
 .hero h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; font-weight: 900; }
 .gradient-text { background: var(--gradient-main); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 .typewriter { font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2.5rem; height: 2rem; }
-.btn { padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: transform 0.2s; }
+.btn { padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: transform 0.2s; display: inline-block;}
 .btn.primary { background: var(--accent-green); color: #000; }
 .btn:hover { transform: translateY(-3px); }
 
-/* --- Sections Defaults --- */
+/* --- Defaults --- */
 .section { padding: 6rem 5%; }
 .container { max-width: 1200px; margin: 0 auto; }
-.section-title { font-size: 2.5rem; margin-bottom: 1rem; font-weight: 700; }
+.section-title { font-size: 2.5rem; margin-bottom: 1rem; font-weight: 700; background: linear-gradient(to right, #fff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 .section-desc { color: var(--text-secondary); margin-bottom: 4rem; max-width: 600px; }
 
-/* --- Skills Grid --- */
-.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
-.skill-card {
-    background: var(--bg-card); padding: 2rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.05); transition: 0.4s;
+/* --- NOVO DESIGN: Skills (Glow Cards) --- */
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; }
+
+.glow-card {
+    background: var(--bg-card);
+    padding: 2.5rem;
+    border-radius: 20px;
+    position: relative;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: 0.4s;
+    z-index: 1;
+    overflow: hidden;
 }
-.skill-card:hover { transform: translateY(-10px); border-color: var(--accent-green); box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.2); }
-.skill-card h3 { margin-bottom: 0.5rem; font-size: 1.2rem; }
-.skill-card p { font-size: 0.9rem; color: var(--text-secondary); }
 
-.icon-box { width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.5rem; }
-.purple { background: rgba(139, 92, 246, 0.1); color: var(--accent-purple); }
-.green { background: rgba(16, 185, 129, 0.1); color: var(--accent-green); }
-.blue { background: rgba(59, 130, 246, 0.1); color: var(--accent-blue); }
-.orange { background: rgba(245, 158, 11, 0.1); color: var(--accent-orange); }
-.leaf { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid #34d399; }
-
-/* --- Education Section --- */
-.education-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
-.edu-card {
-    background: rgba(255,255,255,0.02); padding: 2rem; border-left: 4px solid var(--accent-green); border-radius: 4px; transition: 0.3s;
+/* Efeito de brilho no hover */
+.glow-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 20px; padding: 1.5px; /* espessura da borda */
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0.5; transition: 0.4s;
 }
-.edu-card:hover { background: rgba(255,255,255,0.05); }
-.edu-card .year { font-family: 'Fira Code', monospace; color: var(--accent-blue); font-size: 0.8rem; display: block; margin-bottom: 0.5rem; }
-.edu-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
-.edu-card .institution { color: var(--text-secondary); font-size: 0.9rem; }
 
-/* --- Projects --- */
+.glow-card:hover { transform: translateY(-10px); background: rgba(22, 27, 34, 0.9); }
+.glow-card:hover::before { opacity: 1; background: var(--gradient-main); }
+
+.glow-card h3 { margin-bottom: 0.5rem; font-size: 1.3rem; color: #fff; }
+.glow-card p { font-size: 0.9rem; color: var(--text-secondary); }
+
+.icon-box { 
+    width: 55px; height: 55px; border-radius: 12px; 
+    display: flex; align-items: center; justify-content: center; 
+    font-size: 1.6rem; margin-bottom: 1.5rem; 
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+/* Cores específicas para ícones */
+.purple i { color: var(--accent-purple); filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.4)); }
+.green i { color: var(--accent-green); filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.4)); }
+.blue i { color: var(--accent-blue); filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.4)); }
+.orange i { color: var(--accent-orange); filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.4)); }
+
+/* --- NOVO DESIGN: Timeline de Formação --- */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Linha central vertical */
+.timeline::after {
+    content: ''; position: absolute; width: 2px; background: rgba(255,255,255,0.1);
+    top: 0; bottom: 0; left: 20px; margin-left: -1px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+/* Bolinha da timeline */
+.timeline-item::after {
+    content: ''; position: absolute; width: 12px; height: 12px; right: auto; left: 14px; top: 15px;
+    background-color: var(--bg-dark); border: 2px solid var(--accent-green); border-radius: 50%; z-index: 1;
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+}
+
+.timeline-content {
+    padding: 1.5rem 2rem;
+    background: var(--bg-card);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+    position: relative;
+    transition: 0.3s;
+}
+
+.timeline-content:hover { border-color: var(--accent-green); transform: translateX(5px); }
+
+.time-year {
+    font-family: 'Fira Code', monospace; color: var(--accent-green); font-size: 0.85rem; margin-bottom: 0.5rem; display: inline-block;
+    background: rgba(16, 185, 129, 0.1); padding: 2px 8px; border-radius: 4px;
+}
+.timeline-content h3 { font-size: 1.2rem; margin-bottom: 5px; }
+.timeline-content p { font-size: 0.95rem; color: var(--text-secondary); }
+
+/* --- Projetos (Grid melhorado) --- */
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2.5rem; }
-.project-card { background: var(--bg-card); border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.05); transition: 0.3s; }
-.project-card:hover { border-color: var(--accent-blue); }
-.project-img { width: 100%; height: 200px; object-fit: cover; opacity: 0.8; transition: 0.3s; }
-.project-card:hover .project-img { opacity: 1; transform: scale(1.05); }
+.project-card { 
+    background: var(--bg-card); border-radius: 16px; overflow: hidden; 
+    border: 1px solid rgba(255,255,255,0.05); transition: 0.3s; cursor: pointer; /* Cursor de clique */
+}
+.project-card:hover { border-color: var(--accent-blue); transform: scale(1.02); }
+.project-img { width: 100%; height: 220px; object-fit: cover; opacity: 0.9; transition: 0.3s; }
+.project-card:hover .project-img { opacity: 1; }
 .project-info { padding: 2rem; }
 .project-cat { color: var(--accent-blue); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
 .tech-list { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
 .tech-list li { font-family: 'Fira Code', monospace; font-size: 0.75rem; background: rgba(255,255,255,0.05); padding: 0.3rem 0.8rem; border-radius: 4px; color: var(--text-secondary); }
 
-/* --- Footer & Mobile --- */
-footer { border-top: 1px solid rgba(255,255,255,0.05); margin-top: 4rem; padding: 4rem 0; }
-.footer-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem; }
-.email-link { color: var(--accent-green); font-size: 1.2rem; text-decoration: none; font-weight: 700; }
-.social-links a { color: var(--text-secondary); font-size: 1.5rem; margin-right: 1rem; }
+/* --- Página de Detalhes (NOVO) --- */
+.detail-header {
+    height: 60vh; display: flex; align-items: flex-end; padding-bottom: 4rem;
+    background-size: cover; background-position: center; position: relative;
+}
+.detail-content { max-width: 900px; margin: -80px auto 0; padding: 0 2rem 4rem; position: relative; z-index: 3; }
+.detail-card { background: var(--bg-dark); padding: 3rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+.back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--text-secondary); text-decoration: none; margin-bottom: 2rem; transition: 0.3s; }
+.back-link:hover { color: var(--accent-green); transform: translateX(-5px); }
+.detail-tags span { background: rgba(255,255,255,0.1); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.85rem; margin-right: 0.5rem; color: #fff; }
+
+/* --- Footer --- */
+footer { border-top: 1px solid rgba(255,255,255,0.05); margin-top: 4rem; padding: 4rem 0; text-align: center;}
+.footer-content { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 2rem;}
+.social-links a { color: var(--text-secondary); font-size: 1.5rem; margin-left: 1rem; transition: 0.3s; }
+.social-links a:hover { color: #fff; }
 
 @media (max-width: 768px) {
     .hero h1 { font-size: 2.2rem; }
+    .navbar { padding: 1rem; }
     .nav-links { display: none; }
+    .timeline::after { left: 20px; }
 }
-
 .hidden { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
 .show { opacity: 1; transform: translateY(0); }
