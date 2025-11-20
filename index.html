@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eliohan Y. Poiati | Tech & Nature</title>
+    <title>Eliohan Y. Poiati | Forest Intelligence</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +19,7 @@
         <ul class="nav-links">
             <li><a href="#home">Início</a></li>
             <li><a href="#skills">Expertise</a></li>
+            <li><a href="#formacao">Formação</a></li>
             <li><a href="#projetos">Projetos</a></li>
             <li><a href="#contato" class="btn-nav">Contato</a></li>
         </ul>
@@ -33,66 +34,87 @@
                 <span id="typing-text"></span><span class="cursor">|</span>
             </div>
             <div class="hero-buttons">
-                <a href="#projetos" class="btn primary">Ver Projetos <i class="fas fa-arrow-right"></i></a>
-                <a href="#skills" class="btn secondary">Minhas Skills</a>
+                <a href="#projetos" class="btn primary">Ver Projetos Reais <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </header>
 
     <section id="skills" class="section">
         <div class="container">
-            <h2 class="section-title">A Minha Tríade</h2>
-            <p class="section-desc">A convergência entre Ciência de Dados, Engenharia de Software e o Setor Produtivo.</p>
+            <h2 class="section-title">Minhas Áreas de Atuação</h2>
+            <p class="section-desc">Um perfil multidisciplinar focado em resolver problemas complexos do agronegócio.</p>
             
             <div class="skills-grid">
                 <div class="skill-card hidden">
-                    <div class="icon-box purple">
-                        <i class="fas fa-brain"></i>
-                    </div>
+                    <div class="icon-box purple"><i class="fas fa-brain"></i></div>
                     <h3>Ciência de Dados</h3>
-                    <p>Transformo dados brutos em inteligência operacional usando Deep Learning e Visão Computacional.</p>
-                    <ul class="tech-list">
-                        <li>Python</li>
-                        <li>YOLOv8</li>
-                        <li>TensorFlow</li>
-                        <li>Pandas</li>
-                    </ul>
+                    <p>Modelagem estatística avançada e algoritmos preditivos para tomada de decisão.</p>
                 </div>
 
                 <div class="skill-card hidden">
-                    <div class="icon-box green">
-                        <i class="fas fa-tree"></i>
-                    </div>
-                    <h3>Domínio Florestal</h3>
-                    <p>Expertise em Agrofloresta 4.0. Conhecimento profundo de silvicultura, inventário e processos industriais.</p>
-                    <ul class="tech-list">
-                        <li>GIS</li>
-                        <li>Inventário</li>
-                        <li>Drones</li>
-                        <li>Gestão</li>
-                    </ul>
+                    <div class="icon-box green"><i class="fas fa-eye"></i></div>
+                    <h3>Visão Computacional</h3>
+                    <p>Processamento de imagens de drones e satélites, detecção de objetos (YOLO) e segmentação.</p>
                 </div>
 
                 <div class="skill-card hidden">
-                    <div class="icon-box blue">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>Desenvolvimento</h3>
-                    <p>Criação de sistemas robustos e pipelines de MLOps. Do script de automação à arquitetura na Cloud.</p>
-                    <ul class="tech-list">
-                        <li>AWS & Cloud</li>
-                        <li>Databricks</li>
-                        <li>Airflow</li>
-                        <li>SQL</li>
-                    </ul>
+                    <div class="icon-box blue"><i class="fas fa-database"></i></div>
+                    <h3>Engenharia de Dados</h3>
+                    <p>Arquitetura de Pipelines ETL, Data Lakes (Databricks) e orquestração com Airflow.</p>
                 </div>
+
+                <div class="skill-card hidden">
+                    <div class="icon-box orange"><i class="fas fa-code"></i></div>
+                    <h3>Dev Software</h3>
+                    <p>Desenvolvimento Full-Stack, APIs, automações Python e aplicações web (Streamlit).</p>
+                </div>
+
+                <div class="skill-card hidden">
+                    <div class="icon-box leaf"><i class="fas fa-tree"></i></div>
+                    <h3>Engenharia Florestal</h3>
+                    <p>Silvicultura 4.0, Inventário, Manejo e entendimento profundo das variáveis biológicas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="formacao" class="section">
+        <div class="container">
+            <h2 class="section-title">Formação Acadêmica</h2>
+            <div class="education-grid">
+                
+                <div class="edu-card hidden">
+                    <span class="year">2024 - 2027</span>
+                    <h3>Bacharelado em Estatística</h3>
+                    <p class="institution">Centro Universitário FMU</p>
+                </div>
+
+                <div class="edu-card hidden">
+                    <span class="year">2024 - 2027</span>
+                    <h3>Sistemas de Informação</h3>
+                    <p class="institution">UNISAGRADO</p>
+                </div>
+
+                <div class="edu-card hidden">
+                    <span class="year">2023</span>
+                    <h3>Data Engineering</h3>
+                    <p class="institution">Ada Tech (Curso Técnico)</p>
+                </div>
+
+                <div class="edu-card hidden">
+                    <span class="year">2022</span>
+                    <h3>AI Intern (Deep Learning)</h3>
+                    <p class="institution">Institute for Applied AI (Toronto)</p>
+                </div>
+
             </div>
         </div>
     </section>
 
     <section id="projetos" class="section dark-bg">
         <div class="container">
-            <h2 class="section-title">Projetos em Destaque</h2>
+            <h2 class="section-title">Projetos Desenvolvidos</h2>
+            <p class="section-desc">Soluções reais implementadas em ambiente industrial e florestal.</p>
             <div class="projects-grid" id="project-list">
                 </div>
         </div>
@@ -108,6 +130,7 @@
             <div class="footer-right">
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/eliohanyp" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
                 </div>
                 <p class="copyright">© 2025 Eliohan Yamauti Poiati</p>
             </div>
