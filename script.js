@@ -5,7 +5,8 @@ const projectsData = [
         category: "Visão Computacional",
         title: "DX Forest Vision",
         description: "Contagem automática de plantas e falhas, análise de heterogeneidade e detecção de matocompetição.",
-        fullDescription: "O desafio consistia em monitorar vastas áreas de plantio florestal onde a contagem manual era inviável e imprecisa. Era necessário identificar não apenas a contagem ("Stand Count"), mas também falhas de plantio e competição com ervas daninhas.",
+        // CORREÇÃO ABAIXO: Troquei as aspas externas para simples ' '
+        fullDescription: 'O desafio consistia em monitorar vastas áreas de plantio florestal onde a contagem manual era inviável e imprecisa. Era necessário identificar não apenas a contagem ("Stand Count"), mas também falhas de plantio e competição com ervas daninhas.',
         technicalSolution: "Desenvolvi uma arquitetura baseada em **YOLOv8** treinado com imagens de drones (RGB e Multiespectral). O pipeline processa ortomosaicos pesados dividindo-os em 'tiles', realiza a inferência e remonta as coordenadas geográficas (GeoJSON). O sistema roda em Edge Computing para pré-processamento e envia os dados para AWS S3, onde dashboards Power BI consomem os resultados.",
         image: "https://images.unsplash.com/photo-1506146332389-18140dc7b2fb?q=80&w=1200&auto=format&fit=crop",
         tags: ["YOLOv8", "Python", "OpenCV", "AWS S3", "Edge Computing"]
@@ -172,3 +173,4 @@ function loadProjectDetails() {
         document.querySelector('.detail-content').innerHTML = "<div class='container'><p>Volte para a home e selecione um projeto válido.</p></div>";
     }
 }
+
