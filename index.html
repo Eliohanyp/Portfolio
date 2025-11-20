@@ -3,49 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eliohan Y. Poiati | Data Scientist</title>
+    <title>Eliohan Y. Poiati | Tech & Nature</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <nav>
-            <div class="logo">Eliohan.Data</div>
-            <ul class="nav-links">
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+    <nav class="navbar">
+        <div class="logo">Eliohan<span class="dot">.</span>Data</div>
+        <ul class="nav-links">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#skills">Expertise</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato" class="btn-nav">Contato</a></li>
+        </ul>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-subtitle">Olá, eu sou o Eliohan</p>
+            <h1>Transformando <span class="gradient-text">Dados</span><br>em Decisões Reais.</h1>
+            <div class="typewriter">
+                <span id="typing-text"></span><span class="cursor">|</span>
+            </div>
+            <div class="hero-buttons">
+                <a href="#projetos" class="btn primary">Ver Projetos <i class="fas fa-arrow-right"></i></a>
+                <a href="#skills" class="btn secondary">Minhas Skills</a>
+            </div>
+        </div>
+        <div class="background-glow"></div>
     </header>
 
-    <section class="hero">
-        <h1>Olá, eu sou o Eliohan.</h1>
-        <p>Cientista de Dados especializado em <span>Visão Computacional</span> e <span>Agrofloresta 4.0</span>.</p>
-        <a href="#projetos" class="btn">Ver Projetos</a>
-    </section>
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">A Minha Tríade</h2>
+            <p class="section-desc">A convergência entre tecnologia avançada e o setor produtivo.</p>
+            
+            <div class="skills-grid">
+                <div class="skill-card hidden">
+                    <div class="icon-box purple">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Ciência de Dados</h3>
+                    <p>Modelagem preditiva, Deep Learning e Visão Computacional. Transformo terabytes de dados brutos em inteligência.</p>
+                    <ul class="tech-list">
+                        <li>Python</li>
+                        <li>YOLOv8</li>
+                        <li>TensorFlow</li>
+                        <li>Pandas</li>
+                    </ul>
+                </div>
 
-    <section id="sobre" class="container">
-        <h2>Sobre Mim</h2>
-        <p>Transformo dados brutos em decisões operacionais. Com forte background em engenharia de dados e MLOps, o meu foco é criar arquiteturas de IA que funcionam no mundo real — da floresta ao dashboard.</p>
-    </section>
+                <div class="skill-card hidden">
+                    <div class="icon-box green">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3>Domínio Florestal</h3>
+                    <p>Expertise em Agrofloresta 4.0. Conhecimento profundo de silvicultura, inventário e processos industriais.</p>
+                    <ul class="tech-list">
+                        <li>GIS</li>
+                        <li>Inventário</li>
+                        <li>Drones</li>
+                        <li>Gestão</li>
+                    </ul>
+                </div>
 
-    <section id="projetos" class="container">
-        <h2>Projetos em Destaque</h2>
-        <div class="project-grid" id="project-list">
+                <div class="skill-card hidden">
+                    <div class="icon-box blue">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Engenharia de Software</h3>
+                    <p>Desenvolvimento Full-stack e Arquitetura de Dados. Criação de sistemas robustos, escaláveis e pipelines de MLOps.</p>
+                    <ul class="tech-list">
+                        <li>AWS & Cloud</li>
+                        <li>Databricks</li>
+                        <li>Airflow</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
             </div>
+        </div>
     </section>
 
-    <section id="contato" class="container">
-        <h2>Vamos Conversar?</h2>
-        <p>Estou disponível para novos desafios como Cientista de Dados Sênior.</p>
-        <a href="mailto:ohan.tu@gmail.com" class="btn-outline">Enviar Email</a>
-        <a href="https://www.linkedin.com/in/eliohanyp" target="_blank" class="btn-outline">LinkedIn</a>
+    <section id="projetos" class="section dark-bg">
+        <div class="container">
+            <h2 class="section-title">Projetos em Destaque</h2>
+            <div class="projects-grid" id="project-list">
+                </div>
+        </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Eliohan Yamauti Poiati</p>
+    <footer id="contato">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <h2>Vamos trabalhar juntos?</h2>
+                <p>Disponível para desafios de alto nível como Cientista de Dados Sênior.</p>
+                <a href="mailto:ohan.tu@gmail.com" class="email-link">ohan.tu@gmail.com</a>
+            </div>
+            <div class="footer-right">
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/eliohanyp" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+                <p class="copyright">© 2025 Eliohan Yamauti Poiati</p>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
