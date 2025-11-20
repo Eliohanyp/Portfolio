@@ -134,7 +134,7 @@ function initScrollAnimation() {
 
 // --- FUNÇÃO 2: Página de Detalhes (Carregar Projeto) ---
 function loadProjectDetails() {
-    // Pega o ID da URL (ex: projeto.html?id=dx-forest)
+    // Pega o ID da URL
     const params = new URLSearchParams(window.location.search);
     const projectId = params.get('id');
     
@@ -142,14 +142,24 @@ function loadProjectDetails() {
     const project = projectsData.find(p => p.id === projectId);
 
     if (project) {
-        // Preenche os campos
-        document.getElementById('detail-title').textContent = project.title;
-        document.getElementById('detail-desc').textContent = project.fullDescription; // Descrição longa
-        document.getElementById('detail-tech').textContent = project.technicalSolution;
+        // Preenche Títulos e Imagem de Fundo
+        document.getElementById('detail-title').innerText = project.title;
         document.getElementById('detail-bg').style.backgroundImage = `url('${project.image}')`;
         
-        // Preenche tags
+        // CORREÇÃO AQUI: Usa innerHTML para interpretar o Negrito (**) do Markdown básico
+        // Converte **texto** para <strong>texto</strong>
+        const formatText = (text) => text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+
+        document.getElementById('detail-desc').innerHTML = formatText(project.fullDescription);
+        document.getElementById('detail-tech').innerHTML = formatText(project.technicalSolution);
+        
+        // Adiciona classe para estilizar negrito via CSS
+        document.getElementById('detail-desc').classList.add('tech-description');
+        document.getElementById('detail-tech').classList.add('tech-description');
+
+        // Preenche tags (Badges)
         const tagsContainer = document.getElementById('detail-tags');
+        tagsContainer.innerHTML = ''; // Limpa tags antigas
         project.tags.forEach(tag => {
             const span = document.createElement('span');
             span.textContent = tag;
@@ -158,6 +168,7 @@ function loadProjectDetails() {
 
         document.title = `${project.title} | Eliohan Portfolio`;
     } else {
-        document.getElementById('detail-title').textContent = "Projeto não encontrado";
+        document.getElementById('detail-title').innerText = "Projeto não encontrado";
+        document.querySelector('.detail-content').innerHTML = "<div class='container'><p>Volte para a home e selecione um projeto válido.</p></div>";
     }
 }
