@@ -1,13 +1,12 @@
-// 1. Animação de Digitação (Typewriter)
+// 1. Efeito de Digitação
 const textElement = document.getElementById('typing-text');
-const phrases = ["Cientista de Dados.", "Especialista em Floresta 4.0.", "Engenheiro de Software.", "Criador de Soluções."];
-let phraseIndex = 0;
-let charIndex = 0;
+const phrases = ["Cientista de Dados.", "Especialista em Floresta 4.0.", "Desenvolvedor Full Stack."];
+let phraseIndex = 0; 
+let charIndex = 0; 
 let isDeleting = false;
 
 function type() {
     const currentPhrase = phrases[phraseIndex];
-    
     if (isDeleting) {
         textElement.textContent = currentPhrase.substring(0, charIndex - 1);
         charIndex--;
@@ -15,10 +14,9 @@ function type() {
         textElement.textContent = currentPhrase.substring(0, charIndex + 1);
         charIndex++;
     }
-
     if (!isDeleting && charIndex === currentPhrase.length) {
         isDeleting = true;
-        setTimeout(type, 2000); // Pausa quando termina de escrever
+        setTimeout(type, 2000);
     } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         phraseIndex = (phraseIndex + 1) % phrases.length;
@@ -29,41 +27,36 @@ function type() {
 }
 document.addEventListener('DOMContentLoaded', type);
 
-
-// 2. Dados dos Projetos (Com Imagens Reais via Unsplash)
+// 2. Projetos com Imagens Automáticas (Unsplash)
 const projects = [
     {
         category: "Visão Computacional",
         title: "Monitoramento Florestal com YOLO",
-        description: "Sistema autônomo que utiliza imagens de drones para contar mudas e detectar falhas. Pipeline de retreino automático para evitar Data Drift.",
-        image: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?q=80&w=800&auto=format&fit=crop", // Imagem de Floresta/Drone
+        description: "Contagem de mudas e deteção de falhas usando drones. Pipeline com retreino automático para evitar Data Drift.",
+        image: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?q=80&w=800&auto=format&fit=crop",
         tags: ["Python", "YOLOv8", "AWS S3", "MLOps"]
     },
     {
         category: "Engenharia de Dados",
         title: "Data Lake Operacional",
-        description: "Centralização de dados SAP e INFLOR no Databricks. Orquestração via Airflow processando dados da Torre de Controle 24/7.",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop", // Imagem de Dashboards/Dados
+        description: "Centralização de dados SAP e INFLOR no Databricks. Orquestração via Airflow processando dados 24/7.",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
         tags: ["Databricks", "Airflow", "Spark", "ETL"]
     },
     {
         category: "Data Science",
-        title: "Predição de Manutenção em Frotas",
-        description: "Modelo de regressão multivariada para prever sujidade e falhas mecânicas em caminhões, reduzindo custos operacionais.",
-        image: "https://images.unsplash.com/photo-1580901368919-7738ef31f9ea?q=80&w=800&auto=format&fit=crop", // Imagem de Caminhão/Indústria
-        tags: ["Scikit-learn", "Python", "Estatística", "Power BI"]
+        title: "Predição de Frotas",
+        description: "Modelo de regressão para prever manutenção em caminhões, reduzindo custos operacionais.",
+        image: "https://images.unsplash.com/photo-1580901368919-7738ef31f9ea?q=80&w=800&auto=format&fit=crop",
+        tags: ["Scikit-learn", "Estatística", "Power BI"]
     }
 ];
 
-// 3. Renderizar Projetos
 const projectList = document.getElementById('project-list');
-
 projects.forEach(project => {
     const card = document.createElement('div');
-    card.classList.add('project-card', 'hidden'); // Começa oculto para animação
-    
+    card.classList.add('project-card', 'hidden');
     let tagsHtml = project.tags.map(tag => `<li>${tag}</li>`).join('');
-
     card.innerHTML = `
         <div style="overflow: hidden;">
             <img src="${project.image}" alt="${project.title}" class="project-img">
@@ -75,11 +68,10 @@ projects.forEach(project => {
             <ul class="tech-list">${tagsHtml}</ul>
         </div>
     `;
-    
     projectList.appendChild(card);
 });
 
-// 4. Animação de Scroll (Intersection Observer)
+// 3. Animação de Scroll (Aparecer suavemente)
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -87,6 +79,4 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 });
-
-const hiddenElements = document.querySelectorAll('.hidden');
-hiddenElements.forEach((el) => observer.observe(el));
+document.querySelectorAll('.hidden').forEach((el) => observer.observe(el));
