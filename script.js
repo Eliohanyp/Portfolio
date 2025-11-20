@@ -133,34 +133,29 @@ function initScrollAnimation() {
     document.querySelectorAll('.hidden').forEach((el) => observer.observe(el));
 }
 
-// --- FUNÇÃO 2: Página de Detalhes (Carregar Projeto) ---
+// --- FUNÇÃO 2: Página de Detalhes (Carregar Projeto com Navegação) ---
 function loadProjectDetails() {
-    // Pega o ID da URL
     const params = new URLSearchParams(window.location.search);
     const projectId = params.get('id');
     
-    // Busca o projeto nos dados
-    const project = projectsData.find(p => p.id === projectId);
+    // Encontra o índice do projeto atual no array
+    const currentIndex = projectsData.findIndex(p => p.id === projectId);
+    const project = projectsData[currentIndex];
 
     if (project) {
-        // Preenche Títulos e Imagem de Fundo
+        // 1. Preenche os dados do projeto atual
         document.getElementById('detail-title').innerText = project.title;
         document.getElementById('detail-bg').style.backgroundImage = `url('${project.image}')`;
         
-        // CORREÇÃO AQUI: Usa innerHTML para interpretar o Negrito (**) do Markdown básico
-        // Converte **texto** para <strong>texto</strong>
         const formatText = (text) => text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-
         document.getElementById('detail-desc').innerHTML = formatText(project.fullDescription);
         document.getElementById('detail-tech').innerHTML = formatText(project.technicalSolution);
         
-        // Adiciona classe para estilizar negrito via CSS
         document.getElementById('detail-desc').classList.add('tech-description');
         document.getElementById('detail-tech').classList.add('tech-description');
 
-        // Preenche tags (Badges)
         const tagsContainer = document.getElementById('detail-tags');
-        tagsContainer.innerHTML = ''; // Limpa tags antigas
+        tagsContainer.innerHTML = ''; 
         project.tags.forEach(tag => {
             const span = document.createElement('span');
             span.textContent = tag;
@@ -168,9 +163,22 @@ function loadProjectDetails() {
         });
 
         document.title = `${project.title} | Eliohan Portfolio`;
+
+        // 2. Lógica das Setas (Carrossel)
+        const totalProjects = projectsData.length;
+        
+        // Índice Anterior (se for 0, vai para o último)
+        const prevIndex = (currentIndex - 1 + totalProjects) % totalProjects;
+        const prevProject = projectsData[prevIndex];
+        document.getElementById('prev-project').href = `projeto.html?id=${prevProject.id}`;
+        
+        // Índice Próximo (se for o último, vai para o 0)
+        const nextIndex = (currentIndex + 1) % totalProjects;
+        const nextProject = projectsData[nextIndex];
+        document.getElementById('next-project').href = `projeto.html?id=${nextProject.id}`;
+
     } else {
         document.getElementById('detail-title').innerText = "Projeto não encontrado";
-        document.querySelector('.detail-content').innerHTML = "<div class='container'><p>Volte para a home e selecione um projeto válido.</p></div>";
+        document.querySelector('.project-nav').style.display = 'none'; // Esconde setas se der erro
     }
 }
-
