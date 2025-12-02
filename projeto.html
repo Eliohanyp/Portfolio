@@ -71,10 +71,34 @@
     <div class="detail-content">
         <div class="detail-card">
             <h3 style="margin-bottom: 1rem; color: var(--accent-green);">O Desafio</h3>
-            <p id="detail-desc" style="margin-bottom: 2rem; color: #ccc; line-height: 1.8;"></p>
+            <p id="detail-desc" style="margin-bottom: 3rem; color: #ccc; line-height: 1.8;"></p>
 
             <h3 style="margin-bottom: 1rem; color: var(--accent-blue);">A Solução Técnica</h3>
-            <p id="detail-tech" style="margin-bottom: 2rem; color: #ccc; line-height: 1.8;"></p>
+            <p id="detail-tech" style="margin-bottom: 3rem; color: #ccc; line-height: 1.8;"></p>
+
+            <!-- Galeria de Imagens -->
+            <div id="gallery-section" style="margin-bottom: 3rem;">
+                <h3 style="margin-bottom: 1.5rem; color: var(--accent-purple);">Galeria do Projeto</h3>
+                <div id="detail-gallery" class="project-gallery"></div>
+            </div>
+
+            <!-- Arquitetura -->
+            <div id="architecture-section" style="margin-bottom: 3rem;">
+                <h3 style="margin-bottom: 1rem; color: var(--accent-orange);">Arquitetura do Sistema</h3>
+                <p id="detail-architecture" style="color: #ccc; line-height: 1.8;"></p>
+            </div>
+
+            <!-- Tecnologias -->
+            <div id="technologies-section" style="margin-bottom: 3rem;">
+                <h3 style="margin-bottom: 1.5rem; color: var(--accent-green);">Tecnologias Utilizadas</h3>
+                <div id="detail-technologies" class="technologies-grid"></div>
+            </div>
+
+            <!-- Resultados -->
+            <div id="results-section" style="margin-bottom: 2rem;">
+                <h3 style="margin-bottom: 1rem; color: var(--accent-blue);">Resultados e Impacto</h3>
+                <p id="detail-results" style="color: #ccc; line-height: 1.8;"></p>
+            </div>
         </div>
     </div>
 
@@ -83,6 +107,17 @@
             <p>© 2025 Eliohan Yamauti Poiati</p>
         </div>
     </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <span class="lightbox-prev"><i class="fas fa-chevron-left"></i></span>
+        <span class="lightbox-next"><i class="fas fa-chevron-right"></i></span>
+        <div class="lightbox-content">
+            <img id="lightbox-image" src="" alt="">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
     <script>
