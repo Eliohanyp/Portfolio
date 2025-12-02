@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eliohan Y. Poiati | Forest Intelligence</title>
+    <title>Eliohan Y. Poiati | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -11,12 +11,13 @@
 <body>
 
     <nav class="navbar">
-        <div class="logo">Eliohan<span class="dot">.</span>Data</div>
+        <div class="logo">Eliohan<span class="dot">.</span>Poiati</div>
         <ul class="nav-links">
             <li><a href="#home">Início</a></li>
             <li><a href="#skills">Expertise</a></li>
-            <li><a href="#formacao">Formação</a></li>
             <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#experiencia">Experiência</a></li>
+            <li><a href="#formacao">Formação</a></li>
             <li><a href="#contato" class="btn-nav">Contato</a></li>
         </ul>
     </nav>
@@ -24,12 +25,27 @@
     <header id="home" class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <p class="hero-subtitle">Olá, eu sou o Eliohan</p>
-            <h1>Unindo a <span class="gradient-text">Floresta</span><br>ao Código.</h1>
+            <p class="hero-subtitle">Olá, eu sou o Eliohan Poiati</p>
+            <h1>Unindo a <span class="gradient-text">Floresta</span><br>a Tecnologia.</h1>
             <div class="typewriter"><span id="typing-text"></span><span class="cursor">|</span></div>
             <a href="#projetos" class="btn primary">Ver Projetos Reais <i class="fas fa-arrow-right"></i></a>
         </div>
     </header>
+
+    <section id="resumo" class="section">
+        <div class="container">
+            <div class="resumo-card hidden">
+                <div class="resumo-content">
+                    <div class="resumo-icon"><i class="fas fa-user-tie"></i></div>
+                    <h2 class="section-title">Resumo Profissional</h2>
+                    <p class="resumo-text">Cientista de Dados com mais de 10 anos de experiência em desenvolvimento de software e liderança de projetos, e mais de 5 anos dedicado a visão computacional, sensoriamento remoto, governança de dados e transformação digital no setor florestal. Atuei em iniciativas estratégicas com Qualidade Florestal, Torre de Controle, Desenvolvimento Florestal, Comercialização, Inteligência de Mercado e Planejamento Florestal, conectando necessidades de negócio a soluções analíticas e de IA de alto impacto. Atualmente atuo como desenvolvedor de IA e dados para o negócio florestal da Dexco, liderando o desenvolvimento de soluções avançadas para todas as áreas florestais. Também presto consultoria para a área de Qualidade Florestal da Sinobras, com foco na transformação digital dos apontamentos e pesquisas de campo.</br></p>
+                </div>
+                <div class="resumo-photo-wrapper">
+                    <img src="https://raw.githubusercontent.com/Eliohanyp/Portfolio/cf96c5f7228d8a2dec61cc92c487c2ac769e2d9c/Imagens/Foto.png" alt="Foto de perfil" class="resumo-photo">
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="skills" class="section">
         <div class="container">
@@ -41,33 +57,208 @@
                     <div class="icon-box purple"><i class="fas fa-brain"></i></div>
                     <h3>Ciência de Dados</h3>
                     <p>Modelagem preditiva, Deep Learning e algoritmos avançados para suporte à decisão.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">Modelos Preditivos</span>
+                        <span class="skill-tag">Clusterização</span>
+                        <span class="skill-tag">Regressão Multivariada</span>
+                    </div>
                 </div>
                 <div class="glow-card hidden">
                     <div class="icon-box green"><i class="fas fa-eye"></i></div>
                     <h3>Visão Computacional</h3>
                     <p>Processamento de imagens de drones e satélites (YOLO/OpenCV) para monitoramento.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">YOLOv8</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">OpenCV</span>
+                        <span class="skill-tag">Visão Computacional</span>
+                        <span class="skill-tag">Segmentação</span>
+                        <span class="skill-tag">Detecção de Objetos</span>
+                    </div>
                 </div>
                 <div class="glow-card hidden">
                     <div class="icon-box blue"><i class="fas fa-database"></i></div>
                     <h3>Engenharia de Dados</h3>
                     <p>Arquitetura de Data Lakes (Databricks), pipelines ETL e orquestração via Airflow.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Databricks</span>
+                        <span class="skill-tag">AWS S3</span>
+                        <span class="skill-tag">Apache Airflow</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">ETL</span>
+                    </div>
                 </div>
                 <div class="glow-card hidden">
                     <div class="icon-box orange"><i class="fas fa-laptop-code"></i></div>
                     <h3>Dev Software</h3>
                     <p>Desenvolvimento Full-Stack, APIs, automações Python e Apps Web (Streamlit).</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">REST API</span>
+                    </div>
                 </div>
                 <div class="glow-card hidden">
                     <div class="icon-box green"><i class="fas fa-tree"></i></div>
                     <h3>Sensoriamento Remoto</h3>
                     <p>Conhecimento profundo em manipulação e processamento de imagens em GIS</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">GeoPandas</span>
+                        <span class="skill-tag">Rasterio</span>
+                        <span class="skill-tag">GIS</span>
+                        <span class="skill-tag">Sentinel-2</span>
+                        <span class="skill-tag">Sensoriamento Remoto</span>
+                        <span class="skill-tag">PostGIS</span>
+                    </div>
                 </div>
                  <div class="glow-card hidden">
                     <div class="icon-box green"><i class="fas fa-tree"></i></div>
                     <h3>Eng. Florestal</h3>
                     <p>Conhecimento profundo de silvicultura, inventário e variáveis biológicas.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Qualidade Florestal</span>
+                        <span class="skill-tag">Operações</span>
+                        <span class="skill-tag">Pós-colheita</span>
+                        <span class="skill-tag">Índices Vegetativos</span>
+                        <span class="skill-tag">Floresta 4.0</span>
+                    </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos" class="section">
+        <div class="container">
+            <h2 class="section-title">Projetos Desenvolvidos</h2>
+            <p class="section-desc">Clique nos projetos para ver os detalhes técnicos.</p>
+            <div class="projects-grid" id="project-list">
+                </div>
+        </div>
+    </section>
+
+    <section id="experiencia" class="section">
+        <div class="container">
+            <h2 class="section-title">Experiência Profissional</h2>
+            <p class="section-desc">Trajetória de crescimento na transformação digital do agronegócio.</p>
+            
+            <div class="experience-timeline">
+                <div class="experience-item hidden">
+                    <div class="experience-header">
+                        <div class="experience-company">
+                            <h3>DEXCO</h3>
+                            <span class="experience-total">4 anos 8 meses</span>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-role">   
+                        <div class="role-header">
+                            <h4>Analista de Dados Pleno | Planejamento e Controle</h4>
+                            <span class="role-period">janeiro de 2025 - Present (1 ano)</span>
+                        </div>
+                        <span class="role-location">São Paulo, Brasil</span>
+                        <div class="role-description">
+                            <p>Atuo como especialista em IA e dados para o negócio florestal, liderando o desenvolvimento de soluções avançadas em ciência de dados, engenharia de dados, visão computacional e análises geoespaciais para todas as áreas de Desenvolvimento Florestal. Como Data Steward do ambiente florestal no Databricks, garanto a governança, a qualidade e a disponibilidade dos dados que sustentam decisões estratégicas e operacionais em todas as unidades.</p>
+                            <ul>
+                                <li>Atuação como especialista em IA e tecnologia de dados para todas as áreas de Desenvolvimento Florestal: Desenvolvimento, Mecanização, Melhoramento Genético, Meio Ambiente, Qualidade, Treinamento, Torre de Controle, Geoprocessamento e Inventário, Comercialização, Inteligência de Mercado e Planejamento Florestal.</li>
+                                <li>Responsável por grande parte dos desenvolvimentos internos de tecnologia avançada, com foco em ciência de dados, engenharia de dados, análises estatísticas, análises geoespaciais e, principalmente, visão computacional aplicada ao negócio florestal.</li>
+                                <li>Data Steward do ambiente florestal no Databricks, estruturando modelos de dados, padrões de qualidade, governança e boas práticas para garantir bases confiáveis e reutilizáveis em todas as unidades.</li>
+                                <li>Condução de projetos de dados e IA de ponta a ponta: da compreensão do problema e desenho da solução analítica até a implantação em produção e acompanhamento do uso pelas áreas de negócio.</li>
+                                <li>Desenvolvimento de pipelines e soluções escaláveis para integração, tratamento e disponibilização de dados, suportando análises avançadas, modelos de machine learning e dashboards em tempo quase real.</li>
+                                <li>Apoio técnico direto às áreas de desenvolvimento florestal em todas as unidades, traduzindo necessidades de negócio em soluções de dados e promovendo tomada de decisão orientada a evidências.</li>
+                                <li>Referência interna em tecnologia e IA florestal, atuando na disseminação de conhecimento e na aceleração da adoção de soluções data-driven em toda a cadeia florestal.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-role">
+                        <div class="role-header">
+                            <h4>Analista de Dados Júnior | Excelência Operacional</h4>
+                            <span class="role-period">março de 2024 - janeiro de 2025 (11 meses)</span>
+                        </div>
+                        <span class="role-location">Agudos, São Paulo, Brasil</span>
+                        <div class="role-description">
+                            <p>Neste novo desafio na área de Excelência Operacional, sou responsável por toda a gestão e análise de dados da nossa Torre de Controle, que opera 24 horas por dia, coletando, registrando e monitorando dados de produção, logística e segurança. Com foco na Floresta 4.0, todos esses dados precisam estar centralizados e integrados com nossos sistemas AIKO, SAP S/4 e INFLOR e, para garantir isso, minhas novas responsabilidades incluem:</p>
+                            <ul>
+                                <li>Construção estratégica da área.</li>
+                                <li>Responsável pela gestão e análise de dados da Torre de Controle 24/7, integrando informações de produção, logística e segurança em ambiente florestal (conceito Floresta 4.0).
+                                <li>Atuei na definição de métricas e na estruturação da governança dos dados, garantindo confiabilidade para análises e decisões em tempo real.
+                                <li>Estruturei e mantive o Data Lake em Databricks, integrando SAP S/4, INFLOR e demais sistemas em um único ambiente analítico, preparado para projetos de IA.
+                                <li>Desenvolvi e automatizei relatórios e dashboards gerenciais para a alta gestão, apoiando decisões operacionais e estratégicas orientadas a dados.
+                                <li>Atuei em parceria com Arquitetura e TI na integração de sistemas, assegurando fluxo de dados consistente entre operação, ambiente analítico e sistemas corporativos.
+                                <li>Realizei análises personalizadas para engenheiros de desenvolvimento florestal, traduzindo necessidades técnicas em soluções de dados.
+                                <li>Liderei e acompanhei as rotinas dos diferentes turnos da Torre, promovendo melhoria contínua e treinando a equipe em ferramentas de dados e tecnologia.
+                                <li>Coordenei testes, pesquisas e projetos internos de tecnologia, incluindo iniciativas com universidades (Computação e Agro) voltadas à inovação em operações florestais.
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-role">
+                        <div class="role-header">
+                            <h4>Analista de Dados Júnior | Qualidade Florestal</h4>
+                            <span class="role-period">abril de 2023 - março de 2024 (1 ano)</span>
+                        </div>
+                        <span class="role-location">Agudos, São Paulo, Brasil</span>
+                        <div class="role-description">
+                            <p>Sou responsável pela transformação digital do setor de qualidade florestal e também presto apoio a toda gerência de desenvolvimento florestal. Meu papel envolve gestão e controle de dados de todo o setor de qualidade em todas as unidades (SP, MG, RS, AL e Colômbia). Minhas habilidades em computação, análise de dados e conhecimento do negócio me capacitaram a criar e implementar soluções que aumentaram significativamente a eficácia operacional. Isso se refletiu em um aumento de análises sendo cada vez mais abrangentes, mas sempre garantindo a qualidade dos dados.</p>
+                            <ul>
+                                <li>Responsável pela transformação digital do setor de Qualidade Florestal, estruturando a gestão e o controle de dados em todas as unidades (SP, MG, RS, AL e Colômbia).</li>
+                                <li>Modelei processos e pipelines de dados que tornaram as análises mais abrangentes, mantendo alta qualidade, rastreabilidade e padronização das informações.</li>
+                                <li>Mantive e evoluí modelos de visão computacional para contagem de mudas com imagens de drones, aumentando a precisão do monitoramento de sobrevivência florestal.</li>
+                                <li>Desenvolvi soluções com drones e visão computacional para detecção e redução de desperdício de madeira pós-colheita, apoiando a eficiência operacional.</li>
+                                <li>Estruturei solução para monitoramento de sujidade de cargas de madeira, combinando infraestrutura de captura, visão computacional e regressão multivariada.</li>
+                                <li>Implementei análises remotas de índice vegetativo em florestas adultas utilizando imagens de satélite e processamento de imagens, apoiando decisões silviculturais.</li>
+                                <li>Automatizei relatórios, mapas de agricultura de precisão e análises florestais por idade, além de gerar alertas para manutenção e operação, acelerando a resolução de problemas.</li>
+                                <li>Essa transformação digital aumentou a produtividade do time e melhorou significativamente a qualidade dos dados utilizados na tomada de decisão</li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-role">
+                        <div class="role-header">
+                            <h4>Assistente de Qualidade Florestal</h4>
+                            <span class="role-period">fevereiro de 2022 - maio de 2023 (1 ano 4 meses)</span>
+                        </div>
+                        <span class="role-location">Agudos, São Paulo, Brasil</span>
+                        <div class="role-description">
+                            <p>Como assistente administrativo na área de Qualidade, um dos projetos mais importantes que conduzi foi a otimização de todo o processo de gestão de informações, desde a criação de pesquisas dinâmicas (SURVEY123) para coleta de dados até a visualização em dashboards interativos (POWER BI).</p>
+                            <ul>
+                                <li>Conduzi a otimização do fluxo de gestão de informações do setor, desde a criação de pesquisas dinâmicas para coleta de dados até a visualização em dashboards interativos.</li>
+                                <li>Desenvolvi soluções de mineração de dados em Python, com modelos estatísticos e análises preditivas, gerando insights para apoiar decisões de qualidade florestal.</li>     
+                                <li>Integrei bases de dados às plataformas Power BI e Tableau, criando painéis dinâmicos com visão em tempo quase real do desempenho das florestas e processos.</li>
+                                <li>Implementei rotinas de atualização automática e padronização das bases, garantindo que os dados estivessem sempre atualizados, seguros e disponíveis para o time.</li>
+                                <li>A transformação digital do setor reduziu significativamente o tempo gasto pelos engenheiros no processamento de dados, permitindo maior foco em análise técnica e solução de problemas.</li>
+                            </ul>
+                        </div>
+                    </div>
+                <div class="experience-role">
+                    <div class="role-header">
+                        <h4>EletroTecnico</h4>
+                        <span class="role-period">maio de 2021 - janeiro de 2022 (9 meses)</span>
+                    </div>
+                    <span class="role-location">Agudos, São Paulo, Brasil</span>
+                    <div class="role-description">
+                        <p>Aprendiz EletroTécnico focado somente para o desenvolvimento de projetos de inteligência artificial e visão computacional para o setor de QUALIDADE florestal.</p>
+                        <ul>
+                            <li>Desenvolvi um projeto de inteligência artificial para automatizar a análise de sobrevivência florestal a partir de imagens capturadas por drones.</li>
+                            <li>Apliquei técnicas de clusterização e validação cruzada (k-fold) e treinei modelos de visão computacional em PyTorch para classificação das áreas de sobrevivência.</li>
+                            <li>Modelei o banco de dados integrado ao serviço de armazenamento AWS S3, organizando o histórico de imagens e resultados.</li>
+                            <li>Orquestrei toda a pipeline de dados com Apache Airflow, automatizando as etapas de coleta, processamento, inferência do modelo e disponibilização dos resultados para o negócio.</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
     </section>
@@ -119,15 +310,6 @@
 
 
             </div>
-        </div>
-    </section>
-
-    <section id="projetos" class="section">
-        <div class="container">
-            <h2 class="section-title">Projetos Desenvolvidos</h2>
-            <p class="section-desc">Clique nos projetos para ver os detalhes técnicos.</p>
-            <div class="projects-grid" id="project-list">
-                </div>
         </div>
     </section>
 
